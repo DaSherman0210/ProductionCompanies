@@ -8,7 +8,7 @@ public abstract class Person {
     private int telephoneNumber;
     private String emailAddress;
     private double salary;
-    private double yearsExperience;
+    private int yearsExperience;
     
     public Person(){
         this.id = "";
@@ -20,7 +20,7 @@ public abstract class Person {
         this.salary = 0;
         this.yearsExperience = 0;
     }
-    public Person(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, double yearsExperience){
+    public Person(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, int yearsExperience){
         this.id = id;
         this.name = name;
         this.age = age;
@@ -51,7 +51,7 @@ public abstract class Person {
     public final void setSalary(double salary){
         this.salary = salary;
     }
-    public final void setYearsExperience(double yearsExperience){
+    public final void setYearsExperience(int yearsExperience){
         this.yearsExperience = yearsExperience;
     }
     public String getId(){
@@ -75,7 +75,7 @@ public abstract class Person {
     public double getSalary(){
         return this.salary;
     }
-    public double getYearsExperience(){
+    public int getYearsExperience(){
         return this.yearsExperience;
     }
     @Override
