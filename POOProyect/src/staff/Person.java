@@ -1,7 +1,7 @@
 package staff;
 
 public abstract class Person {
-    private int id;
+    private String id;
     private String name;
     private int age;
     private String nationality;
@@ -11,7 +11,7 @@ public abstract class Person {
     private double yearsExperience;
     
     public Person(){
-        this.id = 0;
+        this.id = "";
         this.name = "";
         this.age = 0;
         this.nationality = "";
@@ -20,7 +20,7 @@ public abstract class Person {
         this.salary = 0;
         this.yearsExperience = 0;
     }
-    public Person(int id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, double yearsExperience){
+    public Person(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, double yearsExperience){
         this.id = id;
         this.name = name;
         this.age = age;
@@ -30,7 +30,7 @@ public abstract class Person {
         this.salary = salary;
         this.yearsExperience = yearsExperience;
     }
-    public final void setId(int id){
+    public final void setId(String id){
         this.id = id;
     }
     public final void setName(String name){
@@ -54,7 +54,7 @@ public abstract class Person {
     public final void setYearsExperience(double yearsExperience){
         this.yearsExperience = yearsExperience;
     }
-    public int getId(){
+    public String getId(){
         return this.id;
     }
     public String getName(){
