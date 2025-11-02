@@ -1,7 +1,9 @@
 
 package content;
 
-public class Serie extends AudioVisualContent{
+import staff.Director;
+
+public class Serie extends AudiovisualContent{
    private int seasons;
    private int chapters;
    private double averageChapterDuration;
@@ -11,7 +13,8 @@ public Serie(){
     this.chapters = 0;
     this.averageChapterDuration = 0;
    }
-public Serie(int seasons, int chapters, double averageChapterDuration){
+public Serie(int seasons, int chapters, double averageChapterDuration, String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage){
+    super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
     this.setSeasons(seasons);
     this.setChapters(chapters);
     this.setAverageChapterDuration(averageChapterDuration);
@@ -41,16 +44,18 @@ public String toString(){
                 "\nAverage of chapter duration: " + this.averageChapterDuration;
     return str;
 }
-@Override
-public double CalculateTotalDuration(){
-    double a = this.averageChapterDuration * this.chapters;
+
+    @Override
+    public double calculateTotalDuration() {
+        double a = 0;
     return a;
-}
-@Override
-public double CalculateProductionBudget(){
-    double b = 0;
+    }
+
+    @Override
+    public double calculateProductionBadget() {
+        double b = 0;
     return b;
-}
+    }
 
 
 
