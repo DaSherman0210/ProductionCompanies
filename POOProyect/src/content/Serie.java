@@ -9,7 +9,7 @@ public class Serie extends AudiovisualContent{
    private double averageChapterDuration;
    
 public Serie(){
-    this.seasons = 0;
+ 
     this.chapters = 0;
     this.averageChapterDuration = 0;
    }
