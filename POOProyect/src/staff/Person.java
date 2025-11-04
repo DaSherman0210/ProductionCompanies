@@ -1,5 +1,7 @@
 package staff;
 
+import pooproyect.Validation;
+
 public abstract class Person {
     private String id;
     private String name;
@@ -31,27 +33,35 @@ public abstract class Person {
         this.yearsExperience = yearsExperience;
     }
     public final void setId(String id){
+        Validation.validateTextNumbers(id);
         this.id = id;
     }
     public final void setName(String name){
+        Validation.validateText(name);
         this.name = name;
     }
     public final void setAge(int age){
+        Validation.validatePositiveNumber(age);
         this.age = age;
     }
     public final void setNationality(String nationality){
+        Validation.validateText(nationality);
         this.nationality = nationality;
     }
     public final void setTelephoneNumber(int telephoneNumber){
+        Validation.validatePositiveNumber(telephoneNumber);
         this.telephoneNumber = telephoneNumber;
     }
     public final void setEmailAddress(String emailAddress){
+        Validation.validateEmail(emailAddress);
         this.emailAddress = emailAddress;
     }
     public final void setSalary(double salary){
+        Validation.validatePositiveDouble(salary);
         this.salary = salary;
     }
     public final void setYearsExperience(int yearsExperience){
+        Validation.validatePositiveNumber(yearsExperience);
         this.yearsExperience = yearsExperience;
     }
     public String getId(){
