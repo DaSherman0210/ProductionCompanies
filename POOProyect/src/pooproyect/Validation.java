@@ -35,6 +35,23 @@ public final class Validation {
         }
     }
     
+    public static void validateDate(String date){
+        if(!date.matches("[a-z A-Z /]+")){
+            throw new IllegalArgumentException("The date is invalid.");
+        }
+    }
+    
+    public static void validateRating(double rating){
+        if(rating < 0 || rating > 10){
+            throw new IllegalArgumentException("The rating is from 0 to 10.");
+        }
+    }
+    
+    public static void validateAge(int age){
+        if(age < 0 || age > 120){
+            throw new IllegalArgumentException("The age is invalid.");
+        }
+    }
     
     
 }
