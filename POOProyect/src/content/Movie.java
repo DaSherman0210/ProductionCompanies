@@ -13,7 +13,7 @@ public class Movie extends AudiovisualContent{
      public Movie(){
          this.oscarsWon = 0;
          this.earnings = 0;
-         this.duration = 0;
+         
      }
      public Movie(String id, String title, String synopsis, String releaseDate, String genre, Director director, double rating, String originalLanguage, int oscarsWon, double earnings, double duration){
      
