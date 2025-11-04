@@ -62,7 +62,7 @@ public class Movie extends AudiovisualContent{
      @Override
      public double calculateProductionBadget(){
          // Ejemplo de cálculo simple: se asume que el presupuesto
-        // es proporcional a las ganancias y premios
+        // es proporcional a las ganancias y  premios
         return (earnings * 0.4) + (oscarsWon * 50000);
      }
 }
