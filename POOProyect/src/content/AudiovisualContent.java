@@ -71,7 +71,7 @@ public abstract class AudiovisualContent {
     }
     
     public final void setRating(double rating){
-        // MISSING THE VALIDATION
+        Validation.validateRating(rating);
         this.rating = rating;
     }
     
