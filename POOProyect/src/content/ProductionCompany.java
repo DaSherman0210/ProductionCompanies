@@ -44,7 +44,7 @@ public class ProductionCompany {
     }
     
     public final void setFoundationDate(String foundationDate){
-        // MISSING VALIDATION
+        Validation.validateDate(foundationDate);
         this.foundationDate = foundationDate;
     }
     
