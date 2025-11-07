@@ -3,7 +3,7 @@ package content;
 
 import staff.Director;
 
-public class Serie extends AudiovisualContent{
+public abstract class Serie extends AudiovisualContent{
    private int seasons;
    private int chapters;
    private double averageChapterDuration;
@@ -13,7 +13,8 @@ public Serie(){
     this.chapters = 0;
     this.averageChapterDuration = 0;
    }
-public Serie(int seasons, int chapters, double averageChapterDuration, String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage){
+
+public Serie(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
     this.setSeasons(seasons);
     this.setChapters(chapters);
@@ -56,7 +57,5 @@ public String toString(){
         double b = 0;
     return b;
     }
-
-
 
 }
