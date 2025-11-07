@@ -3,7 +3,6 @@ package content;
 
 import java.util.ArrayList;
 import staff.Director;
-import pooproyect.Validation;
 
 public class LiveActionSeries extends Serie{
     private boolean scriptSupervisor;
