@@ -82,8 +82,15 @@ public class Documentary extends AudiovisualContent{
     
     @Override
     public double calculateProductionBadget(){
+        int actors = super.getCast().size();
+        double totalDuration = this.scenes * this.mainScene.getDuration();
         
-        return 2;
+        double directorExperience = 10000*super.getDirector().getDirectedMovies();
+        double actorsPrice = actors * 2000;
+        double totalCostPerTime = totalDuration * 2500.00; 
+        
+        double finalPrice = directorExperience + actorsPrice + totalCostPerTime;
+        return finalPrice;
     }
     
     
