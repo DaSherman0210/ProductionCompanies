@@ -2,6 +2,7 @@
 package content;
 
 import java.util.ArrayList;
+import pooproyect.Validation;
 import staff.Animator;
 import staff.Director;
 
@@ -18,11 +19,15 @@ public AnimatedMovies(){
     
 public AnimatedMovies(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, String renderEngine, String dimension){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
+    this.setRenderEngine(renderEngine);
+    this.setDimension(dimension);
 }     
 public final void setRenderEngine(String renderEngine){
+    Validation.validateText(dimension);
     this.renderEngine = renderEngine;
 }    
 public final void setDimension(String dimension){
+    Validation.validateText(dimension);
     this.dimension = dimension;
 }    
 public String getRenderEngine(){
@@ -32,7 +37,7 @@ public String getDimension(){
     return this.dimension;
 }
 public void addAnimator(Animator animators){
-    this.addAnimator(animators);
+    
 }
 
 @Override
@@ -43,6 +48,12 @@ public String toString(){
     }
     return str;
 }
+
+    @Override
+    public double calculateProductionBadget() {
+        double b = 0;
+    return b;
+    }
 
 
 
