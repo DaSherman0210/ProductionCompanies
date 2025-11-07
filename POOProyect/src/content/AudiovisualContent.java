@@ -114,6 +114,10 @@ public abstract class AudiovisualContent {
         return this.originalLanguage;
     }
     
+    public ArrayList<Actor> getCast(){
+        return this.cast;
+    }
+    
     // OTHERS
     
     public void addCast(Actor actor){
