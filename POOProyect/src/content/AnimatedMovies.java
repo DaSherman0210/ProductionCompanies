@@ -6,47 +6,52 @@ import pooproyect.Validation;
 import staff.Animator;
 import staff.Director;
 
-public class AnimatedMovies extends Movie {
+public class AnimatedMovies extends Serie{
     private String renderEngine;
     private String dimension;
     private ArrayList<Animator> animators;
     
-    public AnimatedMovies(){
-        this.renderEngine = "";
-        this.dimension = "";
-    }
-    public AnimatedMovies(String id, String title, String synopsis, String releaseDate, String genre, Director director, double rating, String originalLanguage, int oscarsWon, double earnings, double duration, String renderEngine, String dimension){
-        super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, oscarsWon, earnings, duration);
-        this.setRenderEngine(renderEngine);
-        this.setDimension(dimension);
-        
-        // SETTERS
-    }
-    public final void setRenderEngine(String renderEngine){
-        Validation.validateText(renderEngine);
-        this.renderEngine = renderEngine;
-    }
-    public final void setDimension(String dimension){
-        Validation.validateText(dimension);
-        this.dimension = dimension;
-    }
+public AnimatedMovies(){
+    this.renderEngine = null;
+    this.dimension = null;
+    this.animators = new ArrayList<>();
+}    
     
-        // GETTERS
-    
-    public String getRenderEngine(){
-        return this.renderEngine;
+public AnimatedMovies(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, String renderEngine, String dimension){
+    super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
+    this.setRenderEngine(renderEngine);
+    this.setDimension(dimension);
+}     
+public final void setRenderEngine(String renderEngine){
+    Validation.validateText(dimension);
+    this.renderEngine = renderEngine;
+}    
+public final void setDimension(String dimension){
+    Validation.validateText(dimension);
+    this.dimension = dimension;
+}    
+public String getRenderEngine(){
+    return this.renderEngine;
+}    
+public String getDimension(){
+    return this.dimension;
+}
+  
+@Override
+public String toString(){
+    String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension;
+    for(int i=0;i<this.animators.size();i++){
+        str += this.animators.get(i) + "\t";
     }
-    public String getDimension(){
-        return this.dimension;
-    }
-    public void addAnimators(Animator animator){
-        this.animators.add(animator);
-        
-        // TOSTRING
-    }
+    return str;
+}
+
     @Override
-    public String toString(){
-        String str = super.toString() + "\nRender engine: " + this.getRenderEngine() + "\nDimension: " + this.getDimension();
-        return str;
+    public double calculateProductionBadget() {
+        double b = 0;
+    return b;
     }
+
+
+
 }
