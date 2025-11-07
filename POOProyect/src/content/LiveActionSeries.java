@@ -3,7 +3,7 @@ package content;
 
 import java.util.ArrayList;
 import staff.Director;
-
+import pooproyect.Validation;
 
 public class LiveActionSeries extends Serie{
     private boolean scriptSupervisor;
@@ -13,9 +13,9 @@ public LiveActionSeries(){
     this.scriptSupervisor = true;
     this.locations = new ArrayList<>();
 }    
-public LiveActionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, boolean scriptSupervisor){
-super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
-    
+public LiveActionSeries(int seasons, int chapters, double averageChapterDuration, String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, boolean scriptSupervisor){
+super(seasons, chapters, averageChapterDuration, id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
+ this.setScriptSupervisor(scriptSupervisor);
 }
 public final void setScriptSupervisor(boolean scriptSupervisor){
     this.scriptSupervisor = scriptSupervisor;
