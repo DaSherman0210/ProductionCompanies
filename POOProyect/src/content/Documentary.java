@@ -82,6 +82,7 @@ public class Documentary extends AudiovisualContent{
     
     @Override
     public double calculateProductionBadget(){
+        
         return 2;
     }
     
