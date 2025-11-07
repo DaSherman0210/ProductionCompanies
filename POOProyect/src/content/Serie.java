@@ -13,6 +13,7 @@ public Serie(){
     this.chapters = 0;
     this.averageChapterDuration = 0;
    }
+
 public Serie(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
     this.setSeasons(seasons);
@@ -49,6 +50,12 @@ public String toString(){
     public double calculateTotalDuration() {
         double a = 0;
     return a;
+    }
+
+    @Override
+    public double calculateProductionBadget() {
+        double b = 0;
+    return b;
     }
 
 }
