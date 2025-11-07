@@ -13,7 +13,7 @@ public Serie(){
     this.chapters = 0;
     this.averageChapterDuration = 0;
    }
-public Serie(int seasons, int chapters, double averageChapterDuration, String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage){
+public Serie(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
     this.setSeasons(seasons);
     this.setChapters(chapters);
