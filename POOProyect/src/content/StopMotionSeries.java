@@ -1,6 +1,7 @@
 
 package content;
 
+import pooproyect.Validation;
 import staff.Director;
 
 public class StopMotionSeries extends Serie{
@@ -14,18 +15,21 @@ public StopMotionSeries(){
     this.dimension = null;
 }
 public StopMotionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, int fps, String technique, String dimension){
-    super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, 0);
-    
-    
-    
+    super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
+    this.setFps(fps);
+    this.setDimension(dimension);
+    this.setTechnique(technique);
 }    
 public final void setFps(int fps){
+    Validation.validatePositiveNumber(fps);
     this.fps = fps;
 }    
 public final void setTechnique(String technique){
+    Validation.validateText(technique);
     this.technique = technique;
 }    
-public final void setDimensio(String dimension){
+public final void setDimension(String dimension){
+    Validation.validateText(technique);
     this.dimension = technique;
 }    
 public int getFps(){
@@ -43,6 +47,12 @@ public String toString(){
    String str = super.toString() + "\nNumber of fps: " + this.fps + "\nUsed technique: " + this.technique + "\nDimension: " + this.dimension;
     return str;
 }
+
+    @Override
+    public double calculateProductionBadget() {
+      double a =0;
+      return a;
+    }
     
     
     
