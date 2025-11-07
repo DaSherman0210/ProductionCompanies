@@ -26,6 +26,7 @@ public abstract class AudiovisualContent {
         this.director = null;
         this.rating = 0;
         this.originalLanguage = "";
+        this.cast = null;
     }
     
     public AudiovisualContent(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage){
@@ -37,6 +38,7 @@ public abstract class AudiovisualContent {
         this.setDirector(director);
         this.setRating(rating);
         this.setOriginalLanguage(originalLanguage);
+        this.cast = new ArrayList<Actor>() ;
     }
     
     // SETTERS
