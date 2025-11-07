@@ -1,0 +1,11 @@
+Id,Name,Age,nationality,TelephoneNumber,EmailAddress,Salary,YearsExperience,AnimationStyle,AnimatedMovies
+01,Maicol,25,Colombian,3156772912,maicol@gmail.com,5000,3,Traditional Animation,2
+02,Fred,43,Australian,3091036517,fred@hotmail.com,8000,10,Stop Motion,5
+03,Steve,32,American,012867651,steve@gmail.com,6000,5,Animation 3D,3
+04,Lucas,34,Spain,102973416,lucas@gmail.com,6300,5,Animation 2D,4
+05,Gerome,63,United Kingdom,109871522,gerome@hotmail.com,10000,20,Traditional Animation,15
+06,Durma,40,Indian,6127387161,durma@gmail.com,5200,4,Stop Motion,4
+07,Rubiano,50,Colombian,3056187271,rubiano@gmail.com,12000,30,Animation 2D,20
+08,Obama,62,American,0189218321,obama@gmail.com,11000,24,Traditional Animation,16
+09,Mohammed,35,Indian,3901381983,mohammed@gmail.com,6520,3,Animation 3D,1
+10,Maria,27,Colombian,3101828931,maria@hotmail.com,5400,2,Stop Motion,1

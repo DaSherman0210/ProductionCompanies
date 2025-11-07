@@ -36,10 +36,7 @@ public String getRenderEngine(){
 public String getDimension(){
     return this.dimension;
 }
-public void addAnimator(Animator animators){
-    
-}
-
+  
 @Override
 public String toString(){
     String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension;
