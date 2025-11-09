@@ -10,11 +10,12 @@ public class LiveActionSeries extends Serie{
     
 public LiveActionSeries(){
     this.scriptSupervisor = true;
-    this.locations = new ArrayList<>();
+    this.locations = null;
 }    
 public LiveActionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, boolean scriptSupervisor){
 super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
  this.setScriptSupervisor(scriptSupervisor);
+ this.locations = new ArrayList<>();
 }
 public final void setScriptSupervisor(boolean scriptSupervisor){
     this.scriptSupervisor = scriptSupervisor;
