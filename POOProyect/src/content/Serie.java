@@ -1,6 +1,7 @@
 
 package content;
 
+import pooproyect.Validation;
 import staff.Director;
 
 public abstract class Serie extends AudiovisualContent{
@@ -21,12 +22,15 @@ public Serie(String id, String title, String synopsis, String releaseDate, Strin
     this.setAverageChapterDuration(averageChapterDuration);
 }
 public final void setSeasons(int seasons){
+    Validation.validatePositiveNumber(chapters);
     this.seasons = seasons;
 }
 public final void setChapters(int chapters){
+    Validation.validatePositiveNumber(chapters);
     this.chapters = chapters;
 }
 public final void setAverageChapterDuration(double averageChapterDuration){
+    Validation.validatePositiveDouble(averageChapterDuration);
     this.averageChapterDuration = averageChapterDuration;
 }
 public int getSeasons(){
@@ -46,13 +50,13 @@ public String toString(){
     return str;
 }
 
-    @Override
+
     public double calculateTotalDuration() {
         double a = 0;
     return a;
     }
 
-    @Override
+
     public double calculateProductionBadget() {
         double b = 0;
     return b;
