@@ -10,7 +10,7 @@ public class LiveActionSeries extends Serie{
     
 public LiveActionSeries(){
     this.scriptSupervisor = true;
-    this.locations = null;
+    this.locations = null
 }    
 public LiveActionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, boolean scriptSupervisor){
 super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
