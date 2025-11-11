@@ -135,6 +135,6 @@ public abstract class AudiovisualContent {
     // ABSTRACT
     
     public abstract double calculateTotalDuration();
-    public abstract double calculateProductionBadget();
+    public abstract double calculateProductionBudget();
     
 }
