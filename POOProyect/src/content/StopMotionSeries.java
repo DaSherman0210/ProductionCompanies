@@ -50,7 +50,7 @@ public String toString(){
 }
 
     @Override
-    public double calculateProductionBadget() {
+    public double calculateProductionBudget() {
       double a =0;
       return a;
     }
