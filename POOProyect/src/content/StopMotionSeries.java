@@ -14,6 +14,7 @@ public StopMotionSeries(){
     this.technique = null;
     this.dimension = null;
 }
+
 public StopMotionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, int fps, String technique, String dimension){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
     this.setFps(fps);
