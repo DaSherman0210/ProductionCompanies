@@ -71,7 +71,7 @@ public abstract class AudiovisualContent {
     }
     
     public final void setRating(double rating){
-        // MISSING THE VALIDATION
+        Validation.validateRating(rating);
         this.rating = rating;
     }
     
@@ -114,6 +114,10 @@ public abstract class AudiovisualContent {
         return this.originalLanguage;
     }
     
+    public ArrayList<Actor> getCast(){
+        return this.cast;
+    }
+  
     // OTHERS
     
     public void addCast(Actor actor){
@@ -131,6 +135,6 @@ public abstract class AudiovisualContent {
     // ABSTRACT
     
     public abstract double calculateTotalDuration();
-    public abstract double calculateProductionBadget();
+    public abstract double calculateProductionBudget();
     
 }
