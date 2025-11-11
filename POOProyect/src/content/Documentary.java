@@ -81,7 +81,7 @@ public class Documentary extends AudiovisualContent{
     }
     
     @Override
-    public double calculateProductionBadget(){
+    public double calculateProductionBudget(){
         int actors = super.getCast().size();
         double totalDuration = this.scenes * this.mainScene.getDuration();
         
