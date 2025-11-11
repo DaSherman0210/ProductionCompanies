@@ -11,7 +11,7 @@ public class StopMotionSeries extends Serie{
     
 public StopMotionSeries(){
     this.fps = 0;
-    this.technique = null
+    this.technique = null;
     this.dimension = null;
 }
 public StopMotionSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, int fps, String technique, String dimension){
