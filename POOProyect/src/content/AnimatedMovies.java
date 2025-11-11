@@ -16,7 +16,7 @@ public class AnimatedMovies extends Movie {
         this.dimension = "";
     }
     public AnimatedMovies(String id, String title, String synopsis, String releaseDate, String genre, Director director, double rating, String originalLanguage, int oscarsWon, double earnings, double duration, String renderEngine, String dimension){
-        super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, oscarsWon, earnings, duration);
+        super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, oscarsWon, earnings, duration); 
         this.setRenderEngine(renderEngine);
         this.setDimension(dimension);
         
@@ -46,7 +46,7 @@ public class AnimatedMovies extends Movie {
     }
     @Override
     public String toString(){
-        String str = super.toString() + "\nRender engine: " + this.getRenderEngine() + "\nDimension: " + this.getDimension();
+        String str = super.toString() + "\nRender engine:" + this.getRenderEngine() + "\nDimension: " + this.getDimension();
         return str;
     }
 }
