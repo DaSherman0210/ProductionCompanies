@@ -36,6 +36,7 @@ public class LiveActionMovies extends Movie{
     this.locations.add(location);
     }
     
+    
     //toString
     @Override
     public String toString(){
