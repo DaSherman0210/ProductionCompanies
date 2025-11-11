@@ -53,5 +53,9 @@ public class StopMotionMovies extends Movie {
         String str = super.toString() + "\nFps: " + this.getFps() + "\nTechnique: " + this.getTechnique() + "\nDimension: " + this.getDimension();
         return str;
     }
-  
+    @Override
+    public double calculateProductionBudget(){
+        double a = 0;
+        return a;
+    }
 }

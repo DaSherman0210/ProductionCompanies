@@ -3,7 +3,7 @@ package content;
 import pooproyect.Validation;
 import staff.Director;
 
-public class Movie extends AudiovisualContent{
+public abstract class Movie extends AudiovisualContent{
      private int oscarsWon;
      private double earnings;
      private double duration;
@@ -60,9 +60,5 @@ public class Movie extends AudiovisualContent{
          return duration / 60.0;
      }
      @Override
-     public double calculateProductionBadget(){
-         // Ejemplo de cálculo simple: se asume que el presupuesto
-        // es proporcional a las ganancias y  premios
-        return (earnings * 0.4) + (oscarsWon * 50000);
-     }
+     public abstract double calculateProductionBudget();
 }
