@@ -19,7 +19,7 @@ public class ProductionCompany {
         this.foundationDate = "";
     }
     
-    public ProductionCompany(int String, String name, String country, String foundationDate){
+    public ProductionCompany(String id, String name, String country, String foundationDate){
         this.setId(id);
         this.setName(name);
         this.setCountry(country);
