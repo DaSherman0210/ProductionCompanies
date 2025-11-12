@@ -22,6 +22,9 @@ public AnimatedMovies(String id, String title, String synopsis, String releaseDa
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
 }     
+
+// SETTERS
+
 public final void setRenderEngine(String renderEngine){
     Validation.validateText(dimension);
     this.renderEngine = renderEngine;
@@ -30,11 +33,18 @@ public final void setDimension(String dimension){
     Validation.validateText(dimension);
     this.dimension = dimension;
 }    
+
+// GETTERS
+
 public String getRenderEngine(){
     return this.renderEngine;
 }    
 public String getDimension(){
     return this.dimension;
+}
+
+public void addAnimator(Animator animator){
+    this.animators.add(animator);
 }
   
 @Override
