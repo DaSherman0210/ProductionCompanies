@@ -16,7 +16,7 @@ public AnimatedSeries(){
     this.dimension = null;
     this.animators = null;
 }
-public AnimatedSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, String renderEngine, String dimension, Animator animator){
+public AnimatedSeries(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, String renderEngine, String dimension){
     super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
