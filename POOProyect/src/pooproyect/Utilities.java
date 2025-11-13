@@ -284,15 +284,480 @@ public final class Utilities {
     
     // ANIMATED MOVIES
     
+    public static ArrayList<AnimatedMovies> readAnimatedMovies(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<AnimatedMovies> animatedMovies = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int oscarWon = 0;
+        double earnings = 0;
+        double duration = 0;
+        String renderEngine = "";
+        String dimension = "";
+        AnimatedMovies tempAniMovies = null;
+        Director tempDirector = null;
+        
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            reader.readLine();
+            
+            while((line=reader.readLine())!= null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length >= 13 ){
+                        
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Integer.parseInt(parts[6].trim());
+                        originalLanguage = parts[7].trim();
+                        oscarWon = Integer.parseInt(parts[8].trim());
+                        earnings = Integer.parseInt(parts[9].trim());
+                        duration = Integer.parseInt(parts[10].trim());
+                        renderEngine = parts[11].trim();
+                        dimension = parts[12].trim();
+                        
+                        // tempAniMovies = new AnimatedMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,renderEngine,dimension);
+                        animatedMovies.add(tempAniMovies);
+                        
+                        for(Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempAniMovies.setDirector(tempDirector);
+                                break;
+                            }
+                        }
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the animated movies object. ");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the animated movies object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+            
+        }catch(IOException e){
+            System.out.println("Error reading the file " + e.getMessage() );
+        }
+        
+        return animatedMovies;
+        
+    }
+    
     // LIVE ACTION MOVIES
+    
+    public static ArrayList<LiveActionMovies> readLiveActionMovies(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<LiveActionMovies> liveActionMovies = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int oscarWon = 0;
+        double earnings = 0;
+        double duration = 0;
+        boolean scriptSupervisor = false;
+        
+        LiveActionMovies tempLiveMovies = null;
+        Director tempDirector = null;
+        
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            
+            reader.readLine();
+            
+            while((line= reader.readLine())!= null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length >=12){
+                        
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Integer.parseInt(parts[6].trim());
+                        originalLanguage =parts[7].trim();
+                        oscarWon = Integer.parseInt(parts[8].trim());
+                        earnings = Double.parseDouble(parts[9].trim());
+                        duration = Double.parseDouble(parts[10].trim());
+                        scriptSupervisor = Boolean.parseBoolean(parts[11].trim());
+                        
+                        // tempLiveMovies = new LiveActionMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,scriptSupervisor);
+                        liveActionMovies.add(tempLiveMovies);
+                        
+                        for(Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempLiveMovies.setDirector(tempDirector);
+                                break;
+                            }
+                        }
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the live action movies object");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the live action movies object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+            
+        }catch(IOException e){
+            System.out.println("Error reading the live action movies file " + e.getMessage());
+        }
+        
+        return liveActionMovies;
+        
+    }
     
     // STOP MOTION MOVIES
     
+    public static ArrayList<StopMotionMovies> readStopMotionMovies(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<StopMotionMovies> stopMotionMovies = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int oscarWon = 0;
+        double earnings = 0;
+        double duration = 0;
+        int fps = 0;
+        String technique = "";
+        String dimension = "";
+        
+        StopMotionMovies tempStopMovie = null;
+        Director tempDirector = null;
+        
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            
+            reader.readLine();
+            
+            while((line = reader.readLine())!= null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length>=14){
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Double.parseDouble(parts[6].trim());
+                        originalLanguage = parts[7].trim();
+                        oscarWon = Integer.parseInt(parts[8].trim());
+                        earnings = Double.parseDouble(parts[9].trim());
+                        duration = Double.parseDouble(parts[10].trim());
+                        fps = Integer.parseInt(parts[11].trim());
+                        technique = parts[12].trim();
+                        dimension = parts[13].trim();
+                        
+                        // tempStopMovie = new StopMotionMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,fps,technique,dimension);
+                        stopMotionMovies.add(tempStopMovie);
+                        
+                        for(Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempStopMovie.setDirector(tempDirector);
+                                break;
+                            }
+                        }
+                        
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the stop motion movies object. ");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the stop motion movies object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+                    
+        }catch(IOException e){
+            System.out.println("Error reading the stop motion movies file " + e.getMessage());
+        }
+        
+        return stopMotionMovies;
+        
+    }
+    
     // STOP MOTION SERIES
+    
+    public static ArrayList<StopMotionSeries> readStopMotionSeries(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<StopMotionSeries> stopMotionSeries = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int seasons = 0;
+        int chapters = 0;
+        double averageChapterDuration = 0;
+        int fps = 0;
+        String technique = "";
+        String dimension = "";
+        
+        StopMotionSeries tempStopSeries = null;
+        Director tempDirector = null;
+        
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            
+            reader.readLine();
+            
+            while((line = reader.readLine())!=null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length >= 14){
+                        
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Double.parseDouble(parts[6].trim());
+                        originalLanguage = parts[7].trim();
+                        seasons = Integer.parseInt(parts[8].trim());
+                        chapters = Integer.parseInt(parts[9].trim());
+                        averageChapterDuration = Double.parseDouble(parts[10].trim());
+                        fps = Integer.parseInt(parts[11].trim());
+                        technique = parts[12].trim();
+                        dimension = parts[13].trim();
+                        
+                        //tempStopSeries = new StopMotionSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,fps,technique,dimension);
+                        stopMotionSeries.add(tempStopSeries);
+                        
+                        for (Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempStopSeries.setDirector(tempDirector);
+                                break;
+                            }
+                        }
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the stop motion object");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the stop motion series object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+            
+        }catch(IOException e){
+            System.out.println("Error reading the stop motion series file " + e.getMessage());
+        }
+        
+        return stopMotionSeries;
+        
+    }
     
     // LIVE ACTION SERIES
     
+    public static ArrayList<LiveActionSeries> readLiveActionSeries(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<LiveActionSeries> liveActionSeries = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int seasons = 0;
+        int chapters = 0;
+        double averageChapterDuration = 0;
+        boolean scriptSupervisor = false;
+        
+        LiveActionSeries tempLiveSeries = null;
+        Director tempDirector = null;
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            
+            reader.readLine();
+
+            while((line = reader.readLine())!=null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length >= 12){
+                        
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Double.parseDouble(parts[6].trim());
+                        originalLanguage = parts[7].trim();
+                        seasons = Integer.parseInt(parts[8].trim());
+                        chapters = Integer.parseInt(parts[9].trim());
+                        averageChapterDuration = Double.parseDouble(parts[10].trim());
+                        scriptSupervisor = Boolean.parseBoolean(parts[11].trim());
+                        
+                        // tempLiveSeries = new LiveActionSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,scriptSupervisor);
+                        liveActionSeries.add(tempLiveSeries);
+                        
+                        for (Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempLiveSeries.setDirector(tempDirector);
+                                
+                            }
+                        }
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the live action series object");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the live action series object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+            
+        }catch(IOException e){
+            System.out.println("Error reading the live action series file " + e.getMessage());
+        }
+        
+        return liveActionSeries;
+        
+    }
+    
     // ANIMATED SERIES
+    
+    public static ArrayList<AnimatedSeries> readAnimatedSeries(String filePath, ArrayList<Director> directors){
+        
+        ArrayList<AnimatedSeries> animatedSeries = new ArrayList<>();
+        
+        String line = "";
+        String id = "";
+        String title = "";
+        String synopsis = "";
+        String releaseDate = "";
+        String genre = "";
+        String idDirector = "";
+        double rating = 0;
+        String originalLanguage = "";
+        int seasons = 0;
+        int chapters = 0;
+        double averageChapterDuration = 0;
+        String renderEngine = "";
+        String dimension = "";
+        
+        AnimatedSeries tempAniSeries = null;
+        Director tempDirector = null;
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            
+            reader.readLine();
+            
+            while((line = reader.readLine())!=null){
+                
+                String[] parts = line.split(",");
+                
+                try{
+                    
+                    if(parts.length>=13){
+                    
+                        id = parts[0].trim();
+                        title = parts[1].trim();
+                        synopsis = parts[2].trim();
+                        releaseDate = parts[3].trim();
+                        genre = parts[4].trim();
+                        idDirector = parts[5].trim();
+                        rating = Double.parseDouble(parts[6].trim());
+                        originalLanguage = parts[7].trim();
+                        seasons = Integer.parseInt(parts[8].trim());
+                        chapters = Integer.parseInt(parts[9].trim());
+                        averageChapterDuration = Double.parseDouble(parts[10].trim());
+                        renderEngine = parts[11].trim();
+                        dimension = parts[12].trim();
+                        
+                        // tempAniSeries = new AnimatedSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,renderEngine,dimension);
+                        animatedSeries.add(tempAniSeries);
+                    
+                        for(Director d: directors){
+                            if(idDirector.equals(d.getId())){
+                                tempDirector = d;
+                                tempAniSeries.setDirector(tempDirector);
+                            }
+                        }
+                        
+                    }else{
+                        System.out.println("Incomplete data to create the animated series object ");
+                    }
+                    
+                }catch(Exception e){
+                    System.out.println("Error creating the animated series object " + e.getMessage());
+                }
+                
+            }
+            reader.close();
+            
+        }catch(IOException e){
+            System.out.println("Error reading the animated series file " + e.getMessage());
+        }
+        
+        return animatedSeries;
+        
+    }
     
     // READ DOCUMENTARY
     

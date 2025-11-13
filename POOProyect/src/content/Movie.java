@@ -1,64 +1,72 @@
 
 package content;
 import pooproyect.Validation;
-import staff.Director;
+import staff.*;
 
 public abstract class Movie extends AudiovisualContent{
-     private int oscarsWon;
-     private double earnings;
-     private double duration;
+    private int oscarsWon;
+    private double earnings;
+    private double duration;
      
-     //Constructors
+    //Constructors
      
-     public Movie(){
-         this.oscarsWon = 0;
-         this.earnings = 0;
-         this.duration = 0;
+    public Movie(){
+        this.oscarsWon = 0;
+        this.earnings = 0;
+        this.duration = 0;
      }
-     public Movie(String id, String title, String synopsis, String releaseDate, String genre, Director director, double rating, String originalLanguage, int oscarsWon, double earnings, double duration){
+    
+    public Movie(String id, String title, String synopsis, String releaseDate, String genre, Director director, double rating, String originalLanguage, int oscarsWon, double earnings, double duration){
      
-         super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
-         this.oscarsWon = oscarsWon;
-         this.earnings = earnings;
-         this.duration = duration;
+        super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
+        this.setOscarsWon(oscarsWon);
+        this.setEarnings(earnings);
+        this.setDuration(duration);
      }
      
-     //sets y gets
+    //SETS
      
-     public final void setOscarsWon(int oscarsWon){
+    public final void setOscarsWon(int oscarsWon){
        Validation.validatePositiveNumber(oscarsWon);
        this.oscarsWon = oscarsWon;
      }
      
-     public final void setEarnings(double earnings){
-     Validation.validatePositiveDouble(earnings);
-     this.earnings = earnings;
-     }
+    public final void setEarnings(double earnings){
+        Validation.validatePositiveDouble(earnings);
+        this.earnings = earnings;
+    }
      
-     public final void setDuration(double duration){
-     Validation.validatePositiveDouble(duration);
-     this.duration = duration;
-     }
+    public final void setDuration(double duration){
+        Validation.validatePositiveDouble(duration);
+        this.duration = duration;
+    }
+     
+     // GETS
      
      public int getOscarsWon(){
-     return this.oscarsWon;
-     }
+        return this.oscarsWon;
+    }
      
-     public double getEarnings(){
-     return this.earnings = earnings;
-     }
+    public double getEarnings(){
+        return this.earnings;
+    }
+    
+    public double getDuration(){
+        return this.duration;
+    }
      
-     //toString
-     @Override
-     public String toString(){
-         String str = super.toString() + "\nOscars won: " + this.oscarsWon + "\nEarnings: " + this.earnings + "\nDuration: " + this.duration;
-         return str;
-     }
-     //Abstract methods heredated
-     @Override
-     public double calculateTotalDuration(){
-         return duration / 60.0;
-     }
-     @Override
-     public abstract double calculateProductionBudget();
+     
+    //toString
+    @Override
+    public String toString(){
+        String str = super.toString() + "\nOscars won: " + this.oscarsWon + "\nEarnings: " + this.earnings + "\nDuration: " + this.duration;
+        return str;
+    }
+    //Abstract methods heredated
+    @Override
+    public double calculateTotalDuration(){
+        return duration / 60.0;
+    }
+    @Override
+    public abstract double calculateProductionBudget();
 }

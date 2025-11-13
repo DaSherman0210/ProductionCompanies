@@ -6,19 +6,19 @@ import pooproyect.Validation;
 import staff.Animator;
 import staff.Director;
 
-public class AnimatedMovies extends Serie{
+public class AnimatedMovies extends Movie{
     private String renderEngine;
     private String dimension;
     private ArrayList<Animator> animators;
     
 public AnimatedMovies(){
-    this.renderEngine = null;
-    this.dimension = null;
+    this.renderEngine = "";
+    this.dimension = "";
     this.animators = new ArrayList<>();
 }    
     
-public AnimatedMovies(String id, String title, String synopsis, String releaseDate, String genre, Director director, Double rating, String originalLanguage, int seasons, int chapters, double averageChapterDuration, String renderEngine, String dimension){
-    super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage, seasons, chapters, averageChapterDuration);
+public AnimatedMovies(String id, String title, String synopsis,String releaseDate,String genre,Director director,double rating,String originalLanguage,int oscarsWon,double earnings, double duration ){
+    super(id,title,synopsis,releaseDate,genre,director,rating,originalLanguage,oscarsWon,earnings,duration);
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
 }     
@@ -29,6 +29,7 @@ public final void setRenderEngine(String renderEngine){
     Validation.validateText(dimension);
     this.renderEngine = renderEngine;
 }    
+
 public final void setDimension(String dimension){
     Validation.validateText(dimension);
     this.dimension = dimension;
@@ -39,6 +40,7 @@ public final void setDimension(String dimension){
 public String getRenderEngine(){
     return this.renderEngine;
 }    
+
 public String getDimension(){
     return this.dimension;
 }
