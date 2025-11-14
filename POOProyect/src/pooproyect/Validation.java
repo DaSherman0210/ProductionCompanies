@@ -36,7 +36,7 @@ public final class Validation {
     }
     
     public static void validateDate(String date){
-        if(!date.matches("[a-z A-Z /]+")){
+        if(!date.matches("[0-9 /]+")){
             throw new IllegalArgumentException("The date is invalid.");
         }
     }

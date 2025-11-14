@@ -16,9 +16,9 @@ public final class Utilities {
     
     public static void printMenu(){
         System.out.println("\n\f\f MENU");
-        System.out.println("1)Print Scenes ");
-        System.out.println("2)Create a new Scene ");
-        System.out.println("3)Modify an existing Scene ");
+        System.out.println("1)Print Actors ");
+        System.out.println("2)Create a new Actor");
+        System.out.println("3)Modify an existing Actor");
         System.out.println("4)Create Report File ");
         System.out.println("5)End program ");
     }
@@ -110,6 +110,7 @@ public final class Utilities {
             
             while((line = reader.readLine())!= null){
                 
+                
                 String[] parts = line.split(",");
                 
                 try{
@@ -128,6 +129,8 @@ public final class Utilities {
                         actedMovies =Integer.parseInt(parts[9].trim());
                         isVoiceActor = Boolean.parseBoolean(parts[10].trim());
                         idAudiovisualContent = parts[11].trim();
+                        
+                        System.out.println(parts);
                         
                         tempActor = new Actor(id,name,age,nationality,telephoneNumber,emailAddress,salary,yearsExperience,agency,actedMovies,isVoiceActor);
                         actors.add(tempActor);
@@ -675,9 +678,9 @@ public final class Utilities {
     
     // ANIMATED SERIES
     
-    public static ArrayList<AnimatedSeries> readAnimatedSeries(String filePath, ArrayList<Director> directors){
+    public static ArrayList<AudiovisualContent >readAnimatedSeries(String filePath, ArrayList<Director> directors){
         
-        ArrayList<AnimatedSeries> animatedSeries = new ArrayList<>();
+        ArrayList<AudiovisualContent> animatedSeries = new ArrayList<>();
         
         String line = "";
         String id = "";
@@ -701,7 +704,7 @@ public final class Utilities {
             
             reader.readLine();
             
-            while((line = reader.readLine())!=null){
+            while((line = reader.readLine())!= null){
                 
                 String[] parts = line.split(",");
                 

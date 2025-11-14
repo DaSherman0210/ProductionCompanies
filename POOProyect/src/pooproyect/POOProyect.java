@@ -18,18 +18,22 @@ public class POOProyect {
         try{
             
             //ARRAY LIST
+            ArrayList<AudiovisualContent> all = new ArrayList<>();
             
             //Director
             ArrayList<Director> directors = Utilities.readDirector("./directors.txt");
             
-            //Actor
-            // ArrayList<Actor> actors = Utilities.readActors("./actors.txt", audiovisualContent);
             
-//            //AnimatedMovies
-//            ArrayList<AnimatedMovies> animatedMovies = Utilities.readAnimatedMovies("./animatedMovies.txt", directors);
-//            
-//            //AnimatedSeries
-//            ArrayList<AnimatedSeries> animatedSeries = Utilities.readAnimatedSeries("./animatedSeries.txt", directors);
+            
+            //AnimatedMovies
+            //ArrayList<AnimatedMovies> animatedMovies = Utilities.readAnimatedMovies("./animatedMovies.txt", directors);
+
+            //AnimatedSeries
+            ArrayList<AudiovisualContent> animatedSeries = Utilities.readAnimatedSeries("./AnimatedSeries.txt", directors);
+            
+            //Actor
+            ArrayList<Actor> actors = Utilities.readActors("./Actor.txt", animatedSeries);
+            
 //            
 //            //Animator
 //            ArrayList<Animator> animators = Utilities.readAnimator("./animators.txt", animatedMovies, animatedSeries);
@@ -55,7 +59,7 @@ public class POOProyect {
 //            //Documentary
 //            ArrayList<Documentary> documentaries =Utilities.readDocumentary("./documentary.txt", directors, scenes);
 //            
-            System.out.println(directors);
+            System.out.println(actors);
             
         }catch(IllegalArgumentException e){
             System.out.println("Error: " + e.getMessage());

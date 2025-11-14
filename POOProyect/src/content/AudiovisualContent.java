@@ -57,7 +57,7 @@ public abstract class AudiovisualContent {
     }
     
     public final void setReleaseDate(String releaseDate){
-        Validation.validateText(releaseDate);
+        Validation.validateDate(releaseDate);
         this.releaseDate = releaseDate;
     }
     
