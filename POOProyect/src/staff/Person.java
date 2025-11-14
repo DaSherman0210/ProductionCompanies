@@ -23,14 +23,14 @@ public abstract class Person {
         this.yearsExperience = 0;
     }
     public Person(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, int yearsExperience){
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.nationality = nationality;
-        this.telephoneNumber = telephoneNumber;
-        this.emailAddress = emailAddress;
-        this.salary = salary;
-        this.yearsExperience = yearsExperience;
+        this.setId(id);
+        this.setName(name);
+        this.setAge(age);
+        this.setNationality(nationality);
+        this.setTelephoneNumber(telephoneNumber);
+        this.setEmailAddress(emailAddress);
+        this.setSalary(salary);
+        this.setYearsExperience(yearsExperience);
     }
     public final void setId(String id){
         Validation.validateTextNumbers(id);
@@ -90,9 +90,9 @@ public abstract class Person {
     }
     @Override
     public String toString(){
-        String str = "Id: " + this.id + "\nName: " + this.name + "\nAge: " + this.age + "\nNationality: " + this.nationality + 
-                "\nTelephone Number: " + this.telephoneNumber + "\nEmail Address: " + this.emailAddress + "\nSalary: " + this.salary +
-                "\nYears of experience: " + this.yearsExperience;
+        String str = "Id: " + this.getId() + "\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nNationality: " + this.getNationality() + 
+                "\nTelephone Number: " + this.getTelephoneNumber() + "\nEmail Address: " + this.getEmailAddress() + "\nSalary: " + this.getSalary() +
+                "\nYears of experience: " + this.getYearsExperience();
         return str;
     }
     public abstract String showTitle();
