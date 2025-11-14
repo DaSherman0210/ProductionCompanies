@@ -71,7 +71,4 @@ public double calculateProductionBudget() {
     return baseCost + timeCost + dimensionCost;
 }
 
-
-
-
 }
