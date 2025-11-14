@@ -1,6 +1,7 @@
 package staff;
 
 import java.util.ArrayList;
+import pooproyect.Validation;
 
 public class Actor extends Person{
    private String agency;
@@ -16,15 +17,17 @@ public class Actor extends Person{
    }
    public Actor(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, int yearsExperience, String agency, int actedMovies, boolean isVoiceActor){
        super(id, name, age, nationality, telephoneNumber, emailAddress, salary, yearsExperience);
-       this.agency = agency;
-       this.actedMovies = actedMovies;
-       this.isVoiceActor = isVoiceActor;
+       this.setAgency(agency);
+       this.setActedMovies(actedMovies);
+       this.setIsVoiceActor(isVoiceActor);
        this.awards = new ArrayList<>();
    }
    public final void setAgency(String agency){
+       Validation.validateText(agency);
        this.agency = agency;
    }
    public final void setActedMovies(int actedMovies){
+       Validation.validatePositiveNumber(actedMovies);
        this.actedMovies = actedMovies;
    }
    public final void setIsVoiceActor(boolean isVoiceActor){
@@ -44,7 +47,7 @@ public class Actor extends Person{
    }
    @Override
    public String toString(){
-       String str = super.toString() + "\nAgency: " + this.agency + "\nActed movies: " + this.actedMovies + "\nIs he a voice actor? " + this.isVoiceActor;
+       String str = super.toString() + "\nAgency: " + this.getAgency() + "\nActed movies: " + this.getActedMovies() + "\nIs he a voice actor? " + this.getIsVoiceActor();
        return str;
    }
    @Override
