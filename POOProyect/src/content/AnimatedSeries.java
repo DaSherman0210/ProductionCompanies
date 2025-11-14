@@ -55,8 +55,8 @@ public String toString(){
         if(this.dimension.equalsIgnoreCase("2D")){
             double costdimension = 10000;
         }   
-        double costdimension = 20000; 
-    double costanimator = this.animators.size()*50000;
+   double costdimension = 20000; 
+   double costanimator = this.animators.size()*50000;
    double budget = this.getChapters()*this.getSeasons()+costengine+costdimension+costanimator;
    return budget;
     }
