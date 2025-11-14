@@ -1,6 +1,7 @@
 package staff;
 
 import java.util.ArrayList;
+import pooproyect.Validation;
 
 
 public class Director extends Person{
@@ -13,10 +14,11 @@ public class Director extends Person{
     }
     public Director(String id, String name, int age, String nationality, int telephoneNumber, String emailAddress, double salary, int yearsExperience, int directedMovies){
         super(id, name, age, nationality, telephoneNumber, emailAddress, salary, yearsExperience);
-        this.directedMovies = directedMovies;
+        this.setDirectedMovies(directedMovies);
         this.awards = new ArrayList<>();
     }
     public final void setDirectedMovies(int directedMovies){
+        Validation.validatePositiveNumber(directedMovies);
         this.directedMovies = directedMovies;
     }
     public int getDirectedMovies(){
@@ -27,7 +29,7 @@ public class Director extends Person{
     }
     @Override
     public String toString(){
-        String str = super.toString() + "Directed movies: " + this.directedMovies;
+        String str = super.toString() + "Directed movies: " + this.getDirectedMovies();
         return str;
     }
     @Override
