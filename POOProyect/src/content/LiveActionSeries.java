@@ -38,8 +38,10 @@ public String toString(){
 
     @Override
     public double calculateProductionBudget() {
-        double a = 0;
-        return a;
+        double location = this.locations.size()*100000;
+        double actor = 500000;
+        double budget = this.getChapters()+location+actor;
+        return budget;
     }
     
 }    
