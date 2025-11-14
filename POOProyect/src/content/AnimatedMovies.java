@@ -1,4 +1,3 @@
-
 package content;
 
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ public AnimatedMovies(String id, String title, String synopsis,String releaseDat
     super(id,title,synopsis,releaseDate,genre,director,rating,originalLanguage,oscarsWon,earnings,duration);
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
+    this.animators = new ArrayList<>();
 }     
 
 // SETTERS
@@ -35,7 +35,7 @@ public final void setDimension(String dimension){
     this.dimension = dimension;
 }    
 
-// GETTERS
+// Getters
 
 public String getRenderEngine(){
     return this.renderEngine;
@@ -51,7 +51,7 @@ public void addAnimator(Animator animator){
   
 @Override
 public String toString(){
-    String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension;
+    String str = super.toString() + "\nRender engine: " + this.getRenderEngine() + "\nDimension: " + this.getDimension();
     for(int i=0;i<this.animators.size();i++){
         str += this.animators.get(i) + "\t";
     }
@@ -59,11 +59,15 @@ public String toString(){
 }
 
     @Override
-    public double calculateProductionBudget() {
-        double b = 0;
-    return b;
+public double calculateProductionBudget() {
+    double baseCost = animators.size() * 30000;
+    double timeCost = getDuration() * 20000;
+
+    double dimensionCost = 0;
+    if (dimension.equalsIgnoreCase("3D")) {
+        dimensionCost = 500000;
     }
 
-
-
+    return baseCost + timeCost + dimensionCost;
+}
 }
