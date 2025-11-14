@@ -1,0 +1,11 @@
+Id,Name,Age,Nationality,TelephoneNumber,EmailAddress,Salary,YearsExperience,DirectedMovies
+01,Brad Pit,58,American,109828172,bradPit@gmail.com,4000000,20,6
+02,Emma Stone,35,American,310456789,emma.stone@outlook.com,3500000,15,4
+03,Pedro Pascal,49,Chilean,562987123,pedro.pascal@hotmail.com,2800000,12,2
+04,Marion Cotillard,48,French,331423567,marion.cotillard@gmail.com,3200000,18,3
+05,Idris Elba,51,British,442076543,idris.elba@yahoo.com,3800000,16,5
+06,Park Seo-joon,35,Korean,822456789,park.seojoon@naver.com,2200000,8,1
+07,Penélope Cruz,50,Spanish,349156372,penelope.cruz@gmail.com,3000000,22,3
+08,Keanu Reeves,59,Canadian,125034567,keanu.reeves@outlook.com,4500000,25,2
+09,Lupita Nyong'o,41,Kenyan,254712345,lupita.nyongo@yahoo.com,2700000,9,1
+10,Gael García,50,Mexican,525512345,gael.garcia@hotmail.com,2600000,17,4

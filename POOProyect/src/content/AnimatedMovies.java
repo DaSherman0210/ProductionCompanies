@@ -17,7 +17,7 @@ public AnimatedMovies(){
     this.animators = new ArrayList<>();
 }    
     
-public AnimatedMovies(String id, String title, String synopsis,String releaseDate,String genre,Director director,double rating,String originalLanguage,int oscarsWon,double earnings, double duration ){
+public AnimatedMovies(String id, String title, String synopsis,String releaseDate,String genre,Director director,double rating,String originalLanguage,int oscarsWon,double earnings, double duration, String renderEngine, String dimension ){
     super(id,title,synopsis,releaseDate,genre,director,rating,originalLanguage,oscarsWon,earnings,duration);
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
