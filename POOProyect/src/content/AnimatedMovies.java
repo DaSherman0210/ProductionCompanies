@@ -51,7 +51,7 @@ public void addAnimator(Animator animator){
   
 @Override
 public String toString(){
-    String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension;
+    String str = super.toString() + "\nRender engine: " + this.getRenderEngine() + "\nDimension: " + this.getDimension();
     for(int i=0;i<this.animators.size();i++){
         str += this.animators.get(i) + "\t";
     }
@@ -59,10 +59,18 @@ public String toString(){
 }
 
     @Override
-    public double calculateProductionBudget() {
-        double b = 0;
-    return b;
+public double calculateProductionBudget() {
+    double baseCost = animators.size() * 30000;
+    double timeCost = getDuration() * 20000;
+
+    double dimensionCost = 0;
+    if (dimension.equalsIgnoreCase("3D")) {
+        dimensionCost = 500000;
     }
+
+    return baseCost + timeCost + dimensionCost;
+}
+
 
 
 
