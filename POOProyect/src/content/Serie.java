@@ -52,14 +52,9 @@ public String toString(){
 
 
     public double calculateTotalDuration() {
-        double a = 0;
-    return a;
+     return this.seasons*chapters;
     }
 
 
-    public double calculateProductionBadget() {
-        double b = 0;
-    return b;
-    }
-
+    
 }
