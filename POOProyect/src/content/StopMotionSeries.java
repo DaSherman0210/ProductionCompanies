@@ -51,8 +51,14 @@ public String toString(){
 
     @Override
     public double calculateProductionBudget() {
-      double a =0;
-      return a;
+      double costfps = this.getFps() * 1500;
+      double costtecnique = 10000;
+      if(dimension.equalsIgnoreCase("2D")){
+          double costdimension = 10000;
+      }
+      double costdimension = 15000;
+      double budget = costfps+costtecnique+costdimension;
+      return budget;
     }
     
     
