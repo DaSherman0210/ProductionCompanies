@@ -21,7 +21,7 @@ public class Documentary extends AudiovisualContent{
         super(id, title, synopsis, releaseDate, genre, director, rating, originalLanguage);
         this.setType(type);
         this.setTopic(topic);
-        this.setMainScene(idScene, rating, synopsis);
+        this.setMainScene(idScene, duration, description);
     }
     
     // SETTERS

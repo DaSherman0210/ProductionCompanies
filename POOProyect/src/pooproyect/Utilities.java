@@ -330,16 +330,15 @@ public final class Utilities {
                         renderEngine = parts[11].trim();
                         dimension = parts[12].trim();
                         
-                        // tempAniMovies = new AnimatedMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,renderEngine,dimension);
-                        animatedMovies.add(tempAniMovies);
-                        
                         for(Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempAniMovies.setDirector(tempDirector);
                                 break;
                             }
                         }
+                        
+                        tempAniMovies = new AnimatedMovies(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,oscarWon,earnings,duration,renderEngine,dimension);
+                        animatedMovies.add(tempAniMovies);
                         
                     }else{
                         System.out.println("Incomplete data to create the animated movies object. ");
@@ -408,17 +407,16 @@ public final class Utilities {
                         duration = Double.parseDouble(parts[10].trim());
                         scriptSupervisor = Boolean.parseBoolean(parts[11].trim());
                         
-                        // tempLiveMovies = new LiveActionMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,scriptSupervisor);
-                        liveActionMovies.add(tempLiveMovies);
-                        
                         for(Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempLiveMovies.setDirector(tempDirector);
                                 break;
                             }
                         }
                         
+                        tempLiveMovies = new LiveActionMovies(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,oscarWon,earnings,duration,scriptSupervisor);
+                        liveActionMovies.add(tempLiveMovies);
+      
                     }else{
                         System.out.println("Incomplete data to create the live action movies object");
                     }
@@ -489,17 +487,15 @@ public final class Utilities {
                         technique = parts[12].trim();
                         dimension = parts[13].trim();
                         
-                        // tempStopMovie = new StopMotionMovies(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,fps,technique,dimension);
-                        stopMotionMovies.add(tempStopMovie);
-                        
                         for(Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempStopMovie.setDirector(tempDirector);
                                 break;
                             }
                         }
                         
+                        tempStopMovie = new StopMotionMovies(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,oscarWon,earnings,duration,fps,technique,dimension);
+                        stopMotionMovies.add(tempStopMovie);
                         
                     }else{
                         System.out.println("Incomplete data to create the stop motion movies object. ");
@@ -572,16 +568,15 @@ public final class Utilities {
                         technique = parts[12].trim();
                         dimension = parts[13].trim();
                         
-                        //tempStopSeries = new StopMotionSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,fps,technique,dimension);
-                        stopMotionSeries.add(tempStopSeries);
-                        
                         for (Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempStopSeries.setDirector(tempDirector);
                                 break;
                             }
                         }
+                        
+                        tempStopSeries = new StopMotionSeries(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,fps,technique,dimension);
+                        stopMotionSeries.add(tempStopSeries);
                         
                     }else{
                         System.out.println("Incomplete data to create the stop motion object");
@@ -650,16 +645,14 @@ public final class Utilities {
                         averageChapterDuration = Double.parseDouble(parts[10].trim());
                         scriptSupervisor = Boolean.parseBoolean(parts[11].trim());
                         
-                        // tempLiveSeries = new LiveActionSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,scriptSupervisor);
-                        liveActionSeries.add(tempLiveSeries);
-                        
                         for (Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempLiveSeries.setDirector(tempDirector);
-                                
                             }
                         }
+                        
+                        tempLiveSeries = new LiveActionSeries(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,scriptSupervisor);
+                        liveActionSeries.add(tempLiveSeries);
                         
                     }else{
                         System.out.println("Incomplete data to create the live action series object");
@@ -730,15 +723,14 @@ public final class Utilities {
                         renderEngine = parts[11].trim();
                         dimension = parts[12].trim();
                         
-                        // tempAniSeries = new AnimatedSeries(id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,renderEngine,dimension);
-                        animatedSeries.add(tempAniSeries);
-                    
                         for(Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempAniSeries.setDirector(tempDirector);
                             }
                         }
+                        
+                        tempAniSeries = new AnimatedSeries(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,renderEngine,dimension);
+                        animatedSeries.add(tempAniSeries);
                         
                     }else{
                         System.out.println("Incomplete data to create the animated series object ");
@@ -777,7 +769,9 @@ public final class Utilities {
         String type = "";
         String topic  = "";
         int scene = 0;
-        String idMainScene = "";
+        String idScene = "";
+        double duration = 0;
+        String description = "";
         
         Documentary tempDocumentary = null;
         Director tempDirector;
@@ -793,7 +787,7 @@ public final class Utilities {
                 
                 try{
                    
-                    if(parts.length>=12){
+                    if(parts.length>=14){
                         
                         id = parts[0].trim();
                         title = parts[1].trim();
@@ -806,35 +800,25 @@ public final class Utilities {
                         type = parts[8].trim();
                         topic = parts[9].trim();
                         scene = Integer.parseInt(parts[10].trim());
-                        idMainScene = parts[11].trim();
-                        
-                        // tempDocumentary = new Documentary(id,title,synopsis,releaseDate,genre,rating,originalLanguage,type,topic,scene);
-                        documentary.add(tempDocumentary);
+                        idScene = parts[11].trim();
+                        duration = Double.parseDouble(parts[12].trim());
+                        description = parts[12].trim();
                         
                         tempDirector = null;
-                        tempScene = null;
-                    
+                        
+                        
                         for(Director d: directors){
                             if(idDirector.equals(d.getId())){
                                 tempDirector = d;
-                                tempDocumentary.setDirector(tempDirector);
                                 break;
                             }
                         }
                         
-                        for(Scene s: scenes){
-                            if(idMainScene.equals(s.getId())){
-                                tempScene = s;
-                                tempDocumentary.setMainScene(idMainScene, rating, idDirector);
-                            }
-                        }
+                        tempDocumentary = new Documentary(id,title,synopsis,releaseDate,genre,tempDirector,rating,originalLanguage,type,topic,scene,idScene,duration,description);
+                        documentary.add(tempDocumentary);
                         
                         if(tempDirector == null){
                             System.out.println("The director asociated with the documentary was not found.");
-                        }
-                        
-                        if(tempScene == null){
-                            System.out.println("The scene asociated with the documentary was not found.");
                         }
                        
                     }
