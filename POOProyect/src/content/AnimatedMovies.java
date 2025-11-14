@@ -35,7 +35,7 @@ public final void setDimension(String dimension){
     this.dimension = dimension;
 }    
 
-// GETTERS
+// Getters
 
 public String getRenderEngine(){
     return this.renderEngine;
