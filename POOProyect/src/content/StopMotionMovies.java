@@ -54,8 +54,18 @@ public class StopMotionMovies extends Movie {
         return str;
     }
     @Override
-    public double calculateProductionBudget(){
-        double a = 0;
-        return a;
+public double calculateProductionBudget() {
+    double fpsCost = fps * 2000;
+    double timeCost = getDuration() * 30000;
+
+    double techniqueCost = 0;
+    if (technique.equalsIgnoreCase("claymation")) {
+        techniqueCost = 400000;
+    } else if (technique.equalsIgnoreCase("puppet")) {
+        techniqueCost = 250000;
     }
+
+    return fpsCost + timeCost + techniqueCost;
+}
+
 }
