@@ -1,4 +1,3 @@
-
 package content;
 
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ public AnimatedMovies(String id, String title, String synopsis,String releaseDat
     super(id,title,synopsis,releaseDate,genre,director,rating,originalLanguage,oscarsWon,earnings,duration);
     this.setRenderEngine(renderEngine);
     this.setDimension(dimension);
+    this.animators = new ArrayList<>();
 }     
 
 // SETTERS
@@ -70,5 +70,4 @@ public double calculateProductionBudget() {
 
     return baseCost + timeCost + dimensionCost;
 }
-
 }
