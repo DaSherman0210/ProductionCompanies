@@ -25,6 +25,7 @@ public class POOProyect {
             
             
             
+            
             //AnimatedMovies
             //ArrayList<AnimatedMovies> animatedMovies = Utilities.readAnimatedMovies("./animatedMovies.txt", directors);
 
