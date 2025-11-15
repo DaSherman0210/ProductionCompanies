@@ -45,11 +45,4 @@ public class Animator extends Person{
         double bonusPerMovie = 400;
         return getSalary() + (animatedMovies * bonusPerMovie);
     }
-    public String findAnimationStyle(String animationStyle){
-        if (this.animationStyle.equalsIgnoreCase(animationStyle)) {
-        return getName() + " works with the animation style: " + animationStyle;
-    }   else{
-        return getName() + " does not use the animation style: " + animationStyle;
-    }
-  }
 }
