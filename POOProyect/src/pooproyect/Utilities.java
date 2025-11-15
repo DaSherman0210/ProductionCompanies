@@ -14,13 +14,74 @@ public final class Utilities {
     
     private Utilities(){};
     
+    // PRINTING THE MAIN MENU
+    
     public static void printMenu(){
-        System.out.println("\n\f\f MENU");
-        System.out.println("1)Print Actors ");
-        System.out.println("2)Create a new Actor");
-        System.out.println("3)Modify an existing Actor");
-        System.out.println("4)Create Report File ");
-        System.out.println("5)End program ");
+        System.out.println("\n\f MENU \f");
+        System.out.println("1)Print Directors ");
+        System.out.println("2)Print Animated Series ");
+        System.out.println("3)Create a new Animated Series ");
+        System.out.println("4)Modify an existing Animated Series ");
+        System.out.println("5)Create Report File ");
+        System.out.println("6)End program ");
+    }
+    
+    // PRINTING THE ANIMATED SERIES MENU
+    
+    public static void printChangeAnimatedSeries(){
+        System.out.println("\n\f MENU \f");
+        System.out.println("1)Title");
+        System.out.println("2)Synopsis");
+        System.out.println("3)Release Date");
+        System.out.println("4)Genre");
+        System.out.println("5)Director");
+        System.out.println("6)Rating");
+        System.out.println("7)Original Language");
+        System.out.println("8)Seasons");
+        System.out.println("9)Chapters");
+        System.out.println("10)Average Chapter Duration");
+        System.out.println("11)Render Engine");
+        System.out.println("12)Dimension");
+        System.out.println("13)Add Animator");
+        System.out.println("14)Exit");
+    }
+    
+    // CREATING REPORT
+    
+    public static void createReport(String filePath, ArrayList<Director> directors, ArrayList<AnimatedSeries> animatedSeries){
+        
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
+            
+            String line = "";
+            
+            // WRITTING THE DIRECTORS INFORMATION
+            
+            writer.write("Directors Information");
+            writer.newLine();
+            
+            for(Director d: directors){
+                line = d.toString();
+                writer.write(line);
+                writer.newLine();
+            }
+            
+            // WRITTING TYE ANIMATED SERIES INFORMATION
+            
+            for(AnimatedSeries a: animatedSeries){
+                line = a.toString();
+                writer.write(line);
+                writer.newLine();
+            }
+            
+            // CLOSING THE BUFFERED WRITER
+            
+            writer.close();
+            System.out.println("The file was created: " + filePath);
+            
+        }catch(IOException e){
+            System.out.println("Error creating the report file " + e.getMessage());
+        }
+        
     }
     
     // READ DIRECTOR
@@ -225,11 +286,13 @@ public final class Utilities {
                                 }
                             }
                             
+                        }else{
+                            System.out.println("Incomplete data to cretae the object.");
                         }
                         
                         
                     }catch(Exception e){
-                        System.out.println("Incomplete data to cretae the object.");
+                        System.out.println("Error creating the animators file " + e.getMessage());
                     }
                 
             }
@@ -325,11 +388,11 @@ public final class Utilities {
                         releaseDate = parts[3].trim();
                         genre = parts[4].trim();
                         idDirector = parts[5].trim();
-                        rating = Integer.parseInt(parts[6].trim());
+                        rating = Double.parseDouble(parts[6].trim());
                         originalLanguage = parts[7].trim();
                         oscarWon = Integer.parseInt(parts[8].trim());
-                        earnings = Integer.parseInt(parts[9].trim());
-                        duration = Integer.parseInt(parts[10].trim());
+                        earnings = Double.parseDouble(parts[9].trim());
+                        duration = Double.parseDouble(parts[10].trim());
                         renderEngine = parts[11].trim();
                         dimension = parts[12].trim();
                         
@@ -678,9 +741,9 @@ public final class Utilities {
     
     // ANIMATED SERIES
     
-    public static ArrayList<AudiovisualContent >readAnimatedSeries(String filePath, ArrayList<Director> directors){
+    public static ArrayList<AnimatedSeries>readAnimatedSeries(String filePath, ArrayList<Director> directors){
         
-        ArrayList<AudiovisualContent> animatedSeries = new ArrayList<>();
+        ArrayList<AnimatedSeries> animatedSeries = new ArrayList<>();
         
         String line = "";
         String id = "";

@@ -1,11 +1,11 @@
 id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,seasons,chapters,averageChapterDuration,renderEngine,dimension
 01,Avatar,Balance,02/10/2008,Fantasy,02,9.3,English,3,61,23,Toon Boom,2D
-02,Rick and Morty,Chaos,05/08/2022,Sci-Fi,01,9.1,English,7,70,22,Adobe Animate,2D
+02,Rick and Morty,Chaos,05/08/2022,Sci Fi,01,9.1,English,7,70,22,Adobe Animate,2D
 03,Adventure Time,Adventure,03/12/2003,Comedy,04,8.6,English,10,283,11,Toon Boom,2D
 04,BoJack Horseman,Depresion,12/12/2014,Comedy,10,8.8,English,6,77,25,Adobe Animate,2D
 05,The Simpsons,Satire,24/05/2007,Family,07,8.7,English,36,750,22,Toon Boom,2D
 06,SpongeBob,Absurdity,30/03/1999,Comedy,05,8.2,English,14,300,11,Toon Boom,2D
 07,Arcane,Conflict,28/09/2000,Action,04,9.4,English,2,18,40,Unreal Engine,3D
-08,Attack on Titan,Survival,14/02/2013,Action,02,9.1,Japanese,4,94,24,2D hand-draw,2.5D
-09,Gravity Falls,Mistery,07/10/2022,Adventure,09,8.9,English,2,40,22,Toon Boom,2D,Isaac
+08,Attack on Titan,Survival,14/02/2013,Action,02,9.1,Japanese,4,94,24,hand draw,2D
+09,Gravity Falls,Mistery,07/10/2022,Adventure,09,8.9,English,2,40,22,Toon Boom,2D
 10,Cyberpunk,Rebellion,10/10/2010,Action,01,8.9,English,1,10,25,After Effects,2D

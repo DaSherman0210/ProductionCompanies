@@ -1,13 +1,16 @@
 
 package pooproyect;
 
+import java.util.ArrayList;
+import content.*;
+
 public final class Validation {
     
     private Validation(){}
     
     public static void validateTextNumbers(String id){
         if(!id.matches("[0-9 a-z A-Z]+")){
-            throw new IllegalArgumentException("The id is invalid.");
+            throw new IllegalArgumentException("The text-number is invalid.");
         }
     }
     
@@ -50,6 +53,14 @@ public final class Validation {
     public static void validateAge(int age){
         if(age < 0 || age > 120){
             throw new IllegalArgumentException("The age is invalid.");
+        }
+    }
+    
+    public static void validateExistingId(String id, ArrayList<AnimatedSeries> animatedSeries){
+        for(AnimatedSeries a: animatedSeries){
+            if(id.equals(a.getId())){
+                throw new IllegalArgumentException("The id already exist.");
+            }
         }
     }
     
