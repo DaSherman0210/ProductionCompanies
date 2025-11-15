@@ -48,8 +48,9 @@ public void addAnimator(Animator animator){
 }
 @Override
 public String toString(){
-    String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension;
+    String str = super.toString() + "\nRender engine: " + this.renderEngine + "\nDimension: " + this.dimension + "\n";
     for(int i=0;i<this.animators.size();i++){
+        str += "\n Animators \n";
         str += this.animators.get(i) + "\t";
     }
     return str;

@@ -128,7 +128,7 @@ public abstract class AudiovisualContent {
     
     @Override
     public String toString(){
-        String res = "Id: " + this.getId() + "\n Title: " + this.getTitle() + "\n Synopsis: " + this.getSynopsis() + "\n Release Date: " + this.getReleaseDate() + "\n Genre: " +  this.getGenre() + "\n Director: " + this.getDirector() + "\n Rating: " +  this.getRating() + "\n Originial Language: " + this.getOriginalLanguage();
+        String res = "Id: " + this.getId() + "\n Title: " + this.getTitle() + "\n Synopsis: " + this.getSynopsis() + "\n Release Date: " + this.getReleaseDate() + "\n Genre: " +  this.getGenre() + "\n Director: \n * \n" + this.getDirector() + "\n * \n Rating: " +  this.getRating() + "\n Originial Language: " + this.getOriginalLanguage();
         return res;
     }
     

@@ -26,12 +26,12 @@ public AnimatedMovies(String id, String title, String synopsis,String releaseDat
 // SETTERS
 
 public final void setRenderEngine(String renderEngine){
-    Validation.validateText(dimension);
+    Validation.validateText(renderEngine);
     this.renderEngine = renderEngine;
 }    
 
 public final void setDimension(String dimension){
-    Validation.validateText(dimension);
+    Validation.validateTextNumbers(dimension);
     this.dimension = dimension;
 }    
 

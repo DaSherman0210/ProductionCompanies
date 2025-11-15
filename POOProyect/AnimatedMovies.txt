@@ -1,0 +1,11 @@
+id,title,synopsis,releaseDate,genre,idDirector,rating,originalLanguage,oscarWon,earnings,duration,renderEngine,dimension
+01,The Lost Forest,An adventure of creatures in a magical forest,02/10/2023,Fantasy,01,8.5,English,1,150000000,120,Blender,3D
+02,Robot Dreams,A robot searching for identity in a futuristic world,15/03/2020,Sci Fi,02,7.9,English,0,98000000,110,UnrealEngine,3D
+03,Ocean Tales,A journey with sea animals discovering hidden kingdoms,08/11/2019,Adventure,03,8.1,Spanish,2,175000000,95,Maya,2D
+04,Magic Canvas,An artist enters a living painting,30/05/2022,Fantasy,04,8.7,French,1,142000000,102,ToonBoom,2D
+05,Star Paws,Cats in space saving the galaxy,14/09/2018,Comedy,05,7.4,English,0,60000000,88,Blender,3D
+06,Winter Spirits,Spirits guarding a  village,03/12/2023,Drama,06,8.9,Japanese,3,210000000,130,RenderMan,3D
+07,Tiny Heroes,Miniature heroes fighting giant threats,25/01/2017,Action,07,7.6,Korean,0,72000000,99,Maya,2D
+08,The Last Melody,A world where music controls magic,19/04/2024,Musical,08,9.0,English,2,185000000,115,UnrealEngine,3D
+09,Desert Whispers,A spirit guiding travelers in a mystical desert,07/08/2016,Fantasy,09,8.2,Arabic,1,120000000,105,ToonBoom,2D
+10,Clockwork Island,An island powered by gears and steam creatures,29/10/2025,Steampunk,10,8.0,English,0,94000000,112,Blender,3D

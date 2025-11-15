@@ -29,7 +29,7 @@ public class Director extends Person{
     }
     @Override
     public String toString(){
-        String str = super.toString() + "Directed movies: " + this.getDirectedMovies();
+        String str = super.toString() + "\nDirected movies: " + this.getDirectedMovies();
         return str;
     }
     @Override

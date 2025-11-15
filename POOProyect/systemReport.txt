@@ -1,0 +1,451 @@
+Directors Information
+Id: 01
+Name: Brad Pit
+Age: 58
+Nationality: American
+Telephone Number: 109828172
+Email Address: bradPit@gmail.com
+Salary: 4000000.0
+Years of experience: 20
+Directed movies: 6
+Id: 02
+Name: Emma Stone
+Age: 35
+Nationality: American
+Telephone Number: 310456789
+Email Address: emma.stone@outlook.com
+Salary: 3500000.0
+Years of experience: 15
+Directed movies: 4
+Id: 03
+Name: Pedro Pascal
+Age: 49
+Nationality: Chilean
+Telephone Number: 562987123
+Email Address: pedro.pascal@hotmail.com
+Salary: 2800000.0
+Years of experience: 12
+Directed movies: 2
+Id: 04
+Name: Marion Cotillard
+Age: 48
+Nationality: French
+Telephone Number: 331423567
+Email Address: marion.cotillard@gmail.com
+Salary: 3200000.0
+Years of experience: 18
+Directed movies: 3
+Id: 05
+Name: Idris Elba
+Age: 51
+Nationality: British
+Telephone Number: 442076543
+Email Address: idris.elba@yahoo.com
+Salary: 3800000.0
+Years of experience: 16
+Directed movies: 5
+Id: 06
+Name: Park Seojoon
+Age: 35
+Nationality: Korean
+Telephone Number: 822456789
+Email Address: park.seojoon@naver.com
+Salary: 2200000.0
+Years of experience: 8
+Directed movies: 1
+Id: 07
+Name: Penelope Cruz
+Age: 50
+Nationality: Spanish
+Telephone Number: 349156372
+Email Address: penelope.cruz@gmail.com
+Salary: 3000000.0
+Years of experience: 22
+Directed movies: 3
+Id: 08
+Name: Keanu Reeves
+Age: 59
+Nationality: Canadian
+Telephone Number: 125034567
+Email Address: keanu.reeves@outlook.com
+Salary: 4500000.0
+Years of experience: 25
+Directed movies: 2
+Id: 09
+Name: Lupita Nyongo
+Age: 41
+Nationality: Kenyan
+Telephone Number: 254712345
+Email Address: lupita.nyongo@yahoo.com
+Salary: 2700000.0
+Years of experience: 9
+Directed movies: 1
+Id: 10
+Name: Gael Garcia
+Age: 50
+Nationality: Mexican
+Telephone Number: 525512345
+Email Address: gael.garcia@hotmail.com
+Salary: 2600000.0
+Years of experience: 17
+Directed movies: 4
+Id: 01
+ Title: Avatar
+ Synopsis: Balance
+ Release Date: 02/10/2008
+ Genre: Fantasy
+ Director: 
+ * 
+Id: 02
+Name: Emma Stone
+Age: 35
+Nationality: American
+Telephone Number: 310456789
+Email Address: emma.stone@outlook.com
+Salary: 3500000.0
+Years of experience: 15
+Directed movies: 4
+ * 
+ Rating: 9.3
+ Originial Language: English
+Number of seasons: 3
+Number of chapters: 61
+Average of chapter duration: 23.0
+Render engine: Toon Boom
+Dimension: 2D
+
+ Animators 
+Id: 10
+Name: Maria
+Age: 27
+Nationality: Colombian
+Telephone Number: 310182891
+Email Address: maria@hotmail.com
+Salary: 5400.0
+Years of experience: 2
+Animation style: Stop Motion
+Animated movies: 1	
+Id: 02
+ Title: Rick and Morty
+ Synopsis: Chaos
+ Release Date: 05/08/2022
+ Genre: Sci Fi
+ Director: 
+ * 
+Id: 01
+Name: Brad Pit
+Age: 58
+Nationality: American
+Telephone Number: 109828172
+Email Address: bradPit@gmail.com
+Salary: 4000000.0
+Years of experience: 20
+Directed movies: 6
+ * 
+ Rating: 9.1
+ Originial Language: English
+Number of seasons: 7
+Number of chapters: 70
+Average of chapter duration: 22.0
+Render engine: Adobe Animate
+Dimension: 2D
+
+ Animators 
+Id: 01
+Name: Maicol
+Age: 25
+Nationality: Colombian
+Telephone Number: 315677291
+Email Address: maicol@gmail.com
+Salary: 5000.0
+Years of experience: 3
+Animation style: Traditional Animation
+Animated movies: 2	
+ Animators 
+Id: 04
+Name: Lucas
+Age: 34
+Nationality: Spain
+Telephone Number: 102973416
+Email Address: lucas@gmail.com
+Salary: 6300.0
+Years of experience: 5
+Animation style: Animation 2D
+Animated movies: 4	
+Id: 03
+ Title: Adventure Time
+ Synopsis: Adventure
+ Release Date: 03/12/2003
+ Genre: Comedy
+ Director: 
+ * 
+Id: 04
+Name: Marion Cotillard
+Age: 48
+Nationality: French
+Telephone Number: 331423567
+Email Address: marion.cotillard@gmail.com
+Salary: 3200000.0
+Years of experience: 18
+Directed movies: 3
+ * 
+ Rating: 8.6
+ Originial Language: English
+Number of seasons: 10
+Number of chapters: 283
+Average of chapter duration: 11.0
+Render engine: Toon Boom
+Dimension: 2D
+
+Id: 04
+ Title: BoJack Horseman
+ Synopsis: Depresion
+ Release Date: 12/12/2014
+ Genre: Comedy
+ Director: 
+ * 
+Id: 10
+Name: Gael Garcia
+Age: 50
+Nationality: Mexican
+Telephone Number: 525512345
+Email Address: gael.garcia@hotmail.com
+Salary: 2600000.0
+Years of experience: 17
+Directed movies: 4
+ * 
+ Rating: 8.8
+ Originial Language: English
+Number of seasons: 6
+Number of chapters: 77
+Average of chapter duration: 25.0
+Render engine: Adobe Animate
+Dimension: 2D
+
+ Animators 
+Id: 03
+Name: Steve
+Age: 32
+Nationality: American
+Telephone Number: 128676517
+Email Address: steve@gmail.com
+Salary: 6000.0
+Years of experience: 5
+Animation style: Animation 3D
+Animated movies: 3	
+Id: 05
+ Title: The Simpsons
+ Synopsis: Satire
+ Release Date: 24/05/2007
+ Genre: Family
+ Director: 
+ * 
+Id: 07
+Name: Penelope Cruz
+Age: 50
+Nationality: Spanish
+Telephone Number: 349156372
+Email Address: penelope.cruz@gmail.com
+Salary: 3000000.0
+Years of experience: 22
+Directed movies: 3
+ * 
+ Rating: 8.7
+ Originial Language: English
+Number of seasons: 36
+Number of chapters: 750
+Average of chapter duration: 22.0
+Render engine: Toon Boom
+Dimension: 2D
+
+ Animators 
+Id: 07
+Name: Rubiano
+Age: 50
+Nationality: Colombian
+Telephone Number: 305618727
+Email Address: rubiano@gmail.com
+Salary: 12000.0
+Years of experience: 30
+Animation style: Animation 2D
+Animated movies: 20	
+Id: 06
+ Title: SpongeBob
+ Synopsis: Absurdity
+ Release Date: 30/03/1999
+ Genre: Comedy
+ Director: 
+ * 
+Id: 05
+Name: Idris Elba
+Age: 51
+Nationality: British
+Telephone Number: 442076543
+Email Address: idris.elba@yahoo.com
+Salary: 3800000.0
+Years of experience: 16
+Directed movies: 5
+ * 
+ Rating: 8.2
+ Originial Language: English
+Number of seasons: 14
+Number of chapters: 300
+Average of chapter duration: 11.0
+Render engine: Toon Boom
+Dimension: 2D
+
+ Animators 
+Id: 09
+Name: Mohammed
+Age: 35
+Nationality: Indian
+Telephone Number: 390138198
+Email Address: mohammed@gmail.com
+Salary: 6520.0
+Years of experience: 3
+Animation style: Animation 3D
+Animated movies: 1	
+Id: 07
+ Title: Arcane
+ Synopsis: Conflict
+ Release Date: 28/09/2000
+ Genre: Action
+ Director: 
+ * 
+Id: 04
+Name: Marion Cotillard
+Age: 48
+Nationality: French
+Telephone Number: 331423567
+Email Address: marion.cotillard@gmail.com
+Salary: 3200000.0
+Years of experience: 18
+Directed movies: 3
+ * 
+ Rating: 9.4
+ Originial Language: English
+Number of seasons: 2
+Number of chapters: 18
+Average of chapter duration: 40.0
+Render engine: Unreal Engine
+Dimension: 3D
+
+ Animators 
+Id: 02
+Name: Fred
+Age: 43
+Nationality: Australian
+Telephone Number: 309103651
+Email Address: fred@hotmail.com
+Salary: 8000.0
+Years of experience: 10
+Animation style: Stop Motion
+Animated movies: 5	
+ Animators 
+Id: 08
+Name: Obama
+Age: 62
+Nationality: American
+Telephone Number: 189218321
+Email Address: obama@gmail.com
+Salary: 11000.0
+Years of experience: 24
+Animation style: Traditional Animation
+Animated movies: 16	
+Id: 08
+ Title: Attack on Titan
+ Synopsis: Survival
+ Release Date: 14/02/2013
+ Genre: Action
+ Director: 
+ * 
+Id: 02
+Name: Emma Stone
+Age: 35
+Nationality: American
+Telephone Number: 310456789
+Email Address: emma.stone@outlook.com
+Salary: 3500000.0
+Years of experience: 15
+Directed movies: 4
+ * 
+ Rating: 9.1
+ Originial Language: Japanese
+Number of seasons: 4
+Number of chapters: 94
+Average of chapter duration: 24.0
+Render engine: hand draw
+Dimension: 2D
+
+ Animators 
+Id: 06
+Name: Durma
+Age: 40
+Nationality: Indian
+Telephone Number: 612738716
+Email Address: durma@gmail.com
+Salary: 5200.0
+Years of experience: 4
+Animation style: Stop Motion
+Animated movies: 4	
+Id: 09
+ Title: Gravity Falls
+ Synopsis: Mistery
+ Release Date: 07/10/2022
+ Genre: Adventure
+ Director: 
+ * 
+Id: 09
+Name: Lupita Nyongo
+Age: 41
+Nationality: Kenyan
+Telephone Number: 254712345
+Email Address: lupita.nyongo@yahoo.com
+Salary: 2700000.0
+Years of experience: 9
+Directed movies: 1
+ * 
+ Rating: 8.9
+ Originial Language: English
+Number of seasons: 2
+Number of chapters: 40
+Average of chapter duration: 22.0
+Render engine: Toon Boom
+Dimension: 2D
+
+Id: 10
+ Title: Cyberpunk
+ Synopsis: Rebellion
+ Release Date: 10/10/2010
+ Genre: Action
+ Director: 
+ * 
+Id: 01
+Name: Brad Pit
+Age: 58
+Nationality: American
+Telephone Number: 109828172
+Email Address: bradPit@gmail.com
+Salary: 4000000.0
+Years of experience: 20
+Directed movies: 6
+ * 
+ Rating: 8.9
+ Originial Language: English
+Number of seasons: 1
+Number of chapters: 10
+Average of chapter duration: 25.0
+Render engine: After Effects
+Dimension: 2D
+
+ Animators 
+Id: 05
+Name: Gerome
+Age: 63
+Nationality: United Kingdom
+Telephone Number: 109871522
+Email Address: gerome@hotmail.com
+Salary: 10000.0
+Years of experience: 20
+Animation style: Traditional Animation
+Animated movies: 15	

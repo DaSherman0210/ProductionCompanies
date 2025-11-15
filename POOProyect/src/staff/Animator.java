@@ -16,7 +16,7 @@ public class Animator extends Person{
         this.setAnimatedMovies(animatedMovies);
     }
     public final void setAnimationStyle(String animationStyle){
-        Validation.validateText(animationStyle);
+        Validation.validateTextNumbers(animationStyle);
         this.animationStyle = animationStyle;
     }
     public final void setAnimatedMovies(int animatedMovies){
